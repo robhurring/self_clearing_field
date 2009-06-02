@@ -1,0 +1,13 @@
+=About
+Sets up a simple self-clearing input field. When you click in a field the default value is cleared and when you blur the field it reverts back if the user doesn't enter any data.
+
+==Requires
+* Prototype 1.6.*
+
+=Example
+
+  // In your javascript file somewhere
+  document.observe("dom:loaded", function()  
+  {  
+      new SelfClearingInput('ID_OF_INPUT_BOX');  
+  });
