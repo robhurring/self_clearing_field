@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Self Clearing Input Test</title>
+		<script src="lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+		<script src="self_clearing_input.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+      document.observe("dom:loaded", function()  
+      {  
+				// setup _all_ the self-clearing input boxes
+				$$('.self_clearing').each(function(input)
+				{
+				  new SelfClearingInput(input);  
+				});
+      });  
+		</script>
+		<style type="text/css" media="screen">
+			input[type="text"]{
+				padding:4px;
+				font:15px/15px arial,sans-serif;
+				color:#999;
+				width:100%;
+				border:2px solid #999;
+				margin:10px 0;
+				display:block;
+				}
+			fieldset{
+				width:400px;
+				border:5px solid #999;
+				background:#eee;
+				}
+				legend{
+					font:16px/16px arial, sans-serif;
+					color:#77c;
+					}	
+		</style>
+	</head>
+	<body>
+		<fieldset>
+			<legend>Some Form</legend>
+			<input type="text" name="username" value="Enter your desired username" id="username" class="self_clearing" />
+			<input type="text" name="first_name" value="Enter your first name" id="first_name" class="self_clearing" />
+			<input type="text" name="last_name" value="Enter your last name" id="last_name" class="self_clearing" />
+			<input type="text" name="city" value="Enter your city" id="city" class="self_clearing" />
+			<input type="submit" name="some_name" value="Continue &rarr;" id="some_name">
+	</fieldset>
+	</body>
+</html>
